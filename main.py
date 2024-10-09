@@ -11,9 +11,9 @@ keys = rsa.construct_keys()
 def runCryptCommand():
     message = clearTextInput.get('1.0', tk.END)
 
-    # 1 is encrypt
-    # it was once here. when I added hashing, I decided to put it as the else. otherwise I'd have to restructure
-    # the whole code, lol.
+    # 1 is hash
+    # encrypt was once on top, but after adding hashing I would have had to completely restructure the code
+    # i decided not to and go with ugly code :)
     if selection.get() == 2:
         # RSA#encrypt takes a string and returns an encrypted list of integers representing the encrypted characters
         encrypted_list = rsa.encrypt(keys[0], message)
